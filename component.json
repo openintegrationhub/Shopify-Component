@@ -22,7 +22,7 @@
     },
     "triggers": {
       "get_customers": {
-          "main": "./lib/actions/get_customers.js",
+          "main": "./lib/triggers/get_customers.js",
           "title": "Retrieves a list of customers. Note: As of version 2019-10, this endpoint implements pagination by using links that are provided in the response header. Sending the page parameter will return an error. To learn more, see Making requests to paginated REST Admin API endpoints.",
           "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#index-2020-10",
           "fields": {
@@ -37,7 +37,7 @@
           }
       },
       "get_customers_search": {
-          "main": "./lib/actions/get_customers_search.js",
+          "main": "./lib/triggers/get_customers_search.js",
           "title": "Searches for customers that match a supplied query. Note: As of version 2019-10, this endpoint implements pagination by using links that are provided in the response header. Sending the page parameter will return an error. To learn more, see Making requests to paginated REST Admin API endpoints.",
           "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#search-2020-10",
           "fields": {
@@ -52,7 +52,7 @@
           }
       },
       "get_customers_param_customer_id": {
-          "main": "./lib/actions/get_customers_param_customer_id.js",
+          "main": "./lib/triggers/get_customers_param_customer_id.js",
           "title": "Retrieves a single customer.",
           "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#show-2020-10",
           "fields": {
