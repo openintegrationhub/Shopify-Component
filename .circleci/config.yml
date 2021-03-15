@@ -2,7 +2,7 @@ version: 2.1
 executors:
   docker-publisher:
     environment:
-      IMAGE_NAME: openintegrationhub/Shopify-Component
+      IMAGE_NAME: openintegrationhub/shopify-component
     docker:
       - image: circleci/node:12-stretch
 jobs:
