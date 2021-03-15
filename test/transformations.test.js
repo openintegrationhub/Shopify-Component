@@ -9,8 +9,7 @@ describe('Transformations', () => {
   before(async () => {
   });
   it('should transform shopify customer to OIH person format', async () => {
-    const cfg = {};
-    const result = personToOih(shopifyCustomer, cfg, personToOih);
+    const result = personToOih(shopifyCustomer);
     expect(result).to.be.an('object');
 
     expect(result.metadata.recordUid).to.equal(5065088565421);
@@ -42,9 +41,7 @@ describe('Transformations', () => {
   });
 
   it('should transform OIH person to shopify customer format', async () => {
-    const cfg = {};
-    const result = personFromOih(oihPerson, cfg, personToOih);
-    console.log(JSON.stringify(result));
+    const result = personFromOih(oihPerson);
 
     expect(result).to.be.an('object');
     expect(result.metadata.recordUid).to.equal(5065088565421);

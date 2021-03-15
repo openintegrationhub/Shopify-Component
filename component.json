@@ -68,6 +68,21 @@
       }
     },
     "actions": {
+        "upsert_customers": {
+            "main": "./lib/actions/upsert_customers.js",
+            "title": "Upserts a customer.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/create_customers.in.json",
+                "out": "./lib/schemas/create_customers.out.json"
+            }
+        },
         "create_customers": {
             "main": "./lib/actions/create_customers.js",
             "title": "Creates a customer.",
