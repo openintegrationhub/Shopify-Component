@@ -19,6 +19,10 @@ This API does require Oauth2 authorization.
 
 ## Actions
 
+### Upserts a customer.
+
+*Tags:* `upsert_customers`
+
 ### Creates a customer.
 > https://shopify.dev/docs/admin-api/rest/reference/customers/customer#create-2020-01<br/>
 
@@ -43,7 +47,7 @@ This API does require Oauth2 authorization.
 ### Retrieves a list of customers. Note: As of version 2019-10, this endpoint implements pagination by using links that are provided in the response header. Sending the page parameter will return an error. To learn more, see Making requests to paginated REST Admin API endpoints.
 > https://shopify.dev/docs/admin-api/rest/reference/customers/customer#index-2020-01<br/>
 
-*Tags:* `customers` `customer` `customers/customer`
+*Tags:* `get_customers`
 
 #### Input Parameters
 * `ids` - _optional_ - Restrict results to customers specified by a comma-separated list of IDs.<br/>
