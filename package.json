@@ -1,6 +1,6 @@
 {
     "name": "shopify-connector",
-    "version": "2020.0.3",
+    "version": "2020.0.4",
     "description": "The REST Admin API lets you build apps and other integrations for the Shopify admin.",
     "homepage": "",
     "author": {
