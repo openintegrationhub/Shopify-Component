@@ -32,7 +32,7 @@ describe('Transformations', () => {
     expect(result.data.addresses[0].city).to.equal('Hamburg');
     expect(result.data.addresses[0].country).to.equal('Germany');
     expect(result.data.addresses[0].countryCode).to.equal('DE');
-    expect(result.data.addresses[0].primaryContact).to.equal(true);
+    expect(result.data.addresses[0].primaryContact).to.equal('true');
     expect(result.data.addresses[0].description).to.equal('');
 
     expect(result.data.categories).to.have.lengthOf(2);

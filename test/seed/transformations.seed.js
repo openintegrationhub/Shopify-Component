@@ -22,7 +22,7 @@ const oihPerson = {
         region: '',
         country: 'Germany',
         countryCode: 'DE',
-        primaryContact: true,
+        primaryContact: 'true',
         description: '',
       },
     ],
