@@ -1,0 +1,117 @@
+{
+    "title": "Shopify Admin API",
+    "description": "The REST Admin API lets you build apps and other integrations for the Shopify admin.",
+    "docsUrl": "",
+    "url": "https://raw.githubusercontent.com/allengrant/shopify_openapi/master/shopify_openapi.yaml",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+      "get_customers": {
+          "main": "./lib/actions/get_customers.js",
+          "title": "Retrieves a list of customers. Note: As of version 2019-10, this endpoint implements pagination by using links that are provided in the response header. Sending the page parameter will return an error. To learn more, see Making requests to paginated REST Admin API endpoints.",
+          "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#index-2020-10",
+          "fields": {
+              "verbose": {
+                  "viewClass": "CheckBoxView",
+                  "label": "Debug this step (log more data)"
+              }
+          },
+          "metadata": {
+              "in": "./lib/schemas/get_customers.in.json",
+              "out": "./lib/schemas/get_customers.out.json"
+          }
+      },
+      "get_customers_search": {
+          "main": "./lib/actions/get_customers_search.js",
+          "title": "Searches for customers that match a supplied query. Note: As of version 2019-10, this endpoint implements pagination by using links that are provided in the response header. Sending the page parameter will return an error. To learn more, see Making requests to paginated REST Admin API endpoints.",
+          "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#search-2020-10",
+          "fields": {
+              "verbose": {
+                  "viewClass": "CheckBoxView",
+                  "label": "Debug this step (log more data)"
+              }
+          },
+          "metadata": {
+              "in": "./lib/schemas/get_customers_search.in.json",
+              "out": "./lib/schemas/get_customers_search.out.json"
+          }
+      },
+      "get_customers_param_customer_id": {
+          "main": "./lib/actions/get_customers_param_customer_id.js",
+          "title": "Retrieves a single customer.",
+          "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#show-2020-10",
+          "fields": {
+              "verbose": {
+                  "viewClass": "CheckBoxView",
+                  "label": "Debug this step (log more data)"
+              }
+          },
+          "metadata": {
+              "in": "./lib/schemas/get_customers_param_customer_id.in.json",
+              "out": "./lib/schemas/get_customers_param_customer_id.out.json"
+          }
+      }
+    },
+    "actions": {
+        "create_customers": {
+            "main": "./lib/actions/create_customers.js",
+            "title": "Creates a customer.",
+            "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#create-2020-10",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/create_customers.in.json",
+                "out": "./lib/schemas/create_customers.out.json"
+            }
+        },
+        "update_customers_param_customer_id": {
+            "main": "./lib/actions/update_customers_param_customer_id.js",
+            "title": "Updates a customer.",
+            "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#update-2020-10",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/update_customers_param_customer_id.in.json",
+                "out": "./lib/schemas/update_customers_param_customer_id.out.json"
+            }
+        },
+        "delete_customers_param_customer_id": {
+            "main": "./lib/actions/delete_customers_param_customer_id.js",
+            "title": "Deletes a customer. A customer can't be deleted if they have existing orders.",
+            "description": "https://shopify.dev/docs/admin-api/rest/reference/customers/customer#destroy-2020-10",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_customers_param_customer_id.in.json",
+                "out": "./lib/schemas/delete_customers_param_customer_id.out.json"
+            }
+        }
+    }
+}

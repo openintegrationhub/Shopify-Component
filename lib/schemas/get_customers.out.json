@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "ids": {
+            "required": false
+        },
+        "since_id": {
+            "required": false
+        },
+        "created_at_min": {
+            "required": false
+        },
+        "created_at_max": {
+            "required": false
+        },
+        "updated_at_min": {
+            "required": false
+        },
+        "updated_at_max": {
+            "required": false
+        },
+        "limit": {
+            "required": false
+        },
+        "fields": {
+            "required": false
+        }
+    }
+}
