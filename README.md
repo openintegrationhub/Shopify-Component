@@ -15,7 +15,23 @@ The REST Admin API lets you build apps and other integrations for the Shopify ad
 
 ## Authorization
 
-This API does require Oauth2 authorization.
+This API does require authorization.
+
+To use this component you need to activate private apps and create an app in the shopify admin.
+
+This settings can be found under:
+
+https://YOURSHOPNAME.myshopify.com/admin/apps/private
+
+The component expects the following fields in the config object "cfg":
+
+`
+{
+  API_KEY: 'Api key of the private app',
+  PASS: 'Password for the private app',
+  otherServer: 'https://YOURSHOPNAME.myshopify.com',
+}
+`
 
 ## Actions
 
