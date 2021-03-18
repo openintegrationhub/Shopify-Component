@@ -33,6 +33,9 @@ The component expects the following fields in the config object "cfg":
 }
 `
 
+If `API_KEY` and `PASS` are not present it will look for `accessToken` and expects an Oauth2 access token.
+
+
 ## Actions
 
 ### Upserts a customer.
